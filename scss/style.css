@@ -2600,4 +2600,62 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
     padding-top: 10px;
   }
 }
+
+/* whatsapp */
+#whatsapp-indicator {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  background-color: #25D366;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 1s, opacity 0.3s;
+}
+
+#whatsapp-widget {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-100%);
+  width: 180px;
+  height: 50px;
+  z-index: 999;
+  cursor: pointer;
+  background-color: #25D366;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  padding: 0 10px;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#whatsapp-widget.active {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
+#whatsapp-widget svg, 
+#whatsapp-indicator svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+#whatsapp-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
 /*--------------------------------------------------*//*# sourceMappingURL=style.css.map */
